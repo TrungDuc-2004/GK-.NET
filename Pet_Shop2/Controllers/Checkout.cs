@@ -93,10 +93,6 @@ namespace Pet_Shop2.Controllers
                     db.SaveChanges();
                 }
             }
-            
-
-            
-            
             lstCart = null;
             HttpContext.Session.Set<List<CartItem>>("GioHang", lstCart);
             return Json(new {success = true, OrderId= orderid });

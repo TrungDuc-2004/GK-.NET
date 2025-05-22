@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Pet_Shop2.Controllers
 {
-    
+
     public class ChatBotAI : Controller
     {
         private static HttpClient Http = new HttpClient();
-        
+
 
         [HttpPost]
         public async Task<string> GenerateLoremIpsum(string message)
@@ -17,8 +17,8 @@ namespace Pet_Shop2.Controllers
 
 
             // Địa chỉ API và API key của bạn
-            string apiUrl = "https://api.openai.com/v1/engines/text-davinci-003/completions";
-            string apiKey = "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";
+            string apiUrl = "https://api.openai.com/v1/chat/completions";
+            string apiKey = "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";
 
             // Chuỗi tin nhắn bạn muốn gửi đến ChatGPT
             string mess = message;
@@ -45,7 +45,7 @@ namespace Pet_Shop2.Controllers
                 }
                 catch (HttpRequestException e)
                 {
-                    return  e.Message.ToString();
+                    return e.Message.ToString();
                 }
             }
         }

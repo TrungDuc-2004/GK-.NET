@@ -8,9 +8,6 @@ namespace Pet_Shop2.Extensions
 {
     public static class HashMD5
     {
-        //Mã hóa mật khẩu
-
-
         public static string ToMD5(this string str)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();

@@ -50,7 +50,7 @@ public partial class PetShopContext : DbContext
     public virtual DbSet<Ward> Wards { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=MSI;Initial Catalog=Pet_Shop;TrustServerCertificate=True;Integrated Security=True");
+        => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=Pet_Shop;TrustServerCertificate=True;Integrated Security=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -12,7 +12,7 @@ using Pet_Shop2.Models;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<PetShopContext>(options =>
 {
-    options.UseSqlServer("Server=TRUNGDUC;Database=Pet_Shop;Integrated Security=true;");
+    options.UseSqlServer("Server=.;Database=Pet_Shop;Integrated Security=true;");
 });
 // Add services to the container.
 builder.Services.AddControllersWithViews();
